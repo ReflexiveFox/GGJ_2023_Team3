@@ -123,6 +123,37 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &109112407
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 109112408}
+  m_Layer: 6
+  m_Name: StartProjectile
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &109112408
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 109112407}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0.191, z: 1.32}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1082183147}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &172464661
 GameObject:
   m_ObjectHideFlags: 0
@@ -304,7 +335,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 849509622}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: GroundCheck
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -342,7 +373,7 @@ GameObject:
   - component: {fileID: 1082183151}
   - component: {fileID: 1082183150}
   - component: {fileID: 1082183152}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Player
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -414,6 +445,7 @@ Transform:
   - {fileID: 1173131739}
   - {fileID: 1236244756}
   - {fileID: 849509622}
+  - {fileID: 109112408}
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -498,6 +530,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 05706f010096622468fea85de9049880, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  startProjectilePosition: {fileID: 109112408}
+  reloadTime: 1
 --- !u!1 &1173131738
 GameObject:
   m_ObjectHideFlags: 0
@@ -510,7 +544,7 @@ GameObject:
   - component: {fileID: 1173131742}
   - component: {fileID: 1173131741}
   - component: {fileID: 1173131740}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Nose
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -606,7 +640,7 @@ GameObject:
   - component: {fileID: 1236244756}
   - component: {fileID: 1236244755}
   - component: {fileID: 1236244754}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Main Camera
   m_TagString: MainCamera
   m_Icon: {fileID: 0}
@@ -708,7 +742,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 676489b22b4b4ca4c8931ffa4cb48874, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemsToPool: []
+  itemsToPool:
+  - objectToPool: {fileID: 2383074623155194783, guid: 9dab4e4798e07804c80aa7bb5c41c41e, type: 3}
+    amountToPool: 10
+    shouldExpand: 1
   pooledObjects: []
 --- !u!4 &1607229352
 Transform:

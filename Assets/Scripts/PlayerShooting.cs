@@ -1,18 +1,36 @@
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerShooting : MonoBehaviour
+namespace RootBoy
 {
-    // Start is called before the first frame update
-    void Start()
+    public class PlayerShooting : MonoBehaviour
     {
-        
-    }
+        [SerializeField] private Transform startProjectilePosition;
+        [SerializeField, Min(0.01f)] private float reloadTime;
+        private bool canShoot;
 
-    // Update is called once per frame
-    void Update()
-    {
-        
+        private void Start()
+        {
+            canShoot = true;
+        }
+
+        void Update()
+        {
+            if (Input.GetButtonDown("Fire1") && canShoot)
+            {
+                GameObject temp = ObjectPooler.SharedInstance.GetPooledObject("Projectile");
+                temp.transform.position = startProjectilePosition.position;
+                temp.transform.rotation = startProjectilePosition.rotation;
+                temp.SetActive(true);
+                StartCoroutine(StartReloading());
+            }
+        }
+
+        private IEnumerator StartReloading()
+        {
+            canShoot = false;
+            yield return new WaitForSeconds(reloadTime);
+            canShoot = true;
+        }
     }
 }
