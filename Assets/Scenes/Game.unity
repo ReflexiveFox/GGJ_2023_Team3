@@ -846,7 +846,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2261350450983510824, guid: 218a72f3697253549a4cb974980eebe2, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: 1.2
       objectReference: {fileID: 0}
     - target: {fileID: 2261350450983510824, guid: 218a72f3697253549a4cb974980eebe2, type: 3}
       propertyPath: m_LocalRotation.w
@@ -878,6 +878,18 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2261350450983510824, guid: 218a72f3697253549a4cb974980eebe2, type: 3}
       propertyPath: m_ConstrainProportionsScale
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2261350450983510829, guid: 218a72f3697253549a4cb974980eebe2, type: 3}
+      propertyPath: jumpHeight
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 2261350450983510829, guid: 218a72f3697253549a4cb974980eebe2, type: 3}
+      propertyPath: gravityMultiplier
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2261350450983510829, guid: 218a72f3697253549a4cb974980eebe2, type: 3}
+      propertyPath: jumpBottonGracePeriod
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2261350450983510834, guid: 218a72f3697253549a4cb974980eebe2, type: 3}
@@ -1257,7 +1269,7 @@ GameObject:
   - component: {fileID: 1887426262}
   - component: {fileID: 1887426261}
   - component: {fileID: 1887426260}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Terrain
   m_TagString: Untagged
   m_Icon: {fileID: 0}
