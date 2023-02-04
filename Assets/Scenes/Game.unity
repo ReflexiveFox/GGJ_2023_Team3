@@ -1243,6 +1243,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 436077801}
     m_Modifications:
+    - target: {fileID: 2116498912588127414, guid: e28198eb60ed4dc46a58d9562eb030e1, type: 3}
+      propertyPath: m_Radius
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2116498912588127414, guid: e28198eb60ed4dc46a58d9562eb030e1, type: 3}
+      propertyPath: m_StoppingDistance
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 2261350450983510820, guid: e28198eb60ed4dc46a58d9562eb030e1, type: 3}
       propertyPath: m_Name
       value: Parasite (4)
@@ -2420,6 +2428,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 295848003569843942, guid: d057eb8705fec064280b46a90a126e39, type: 3}
+      propertyPath: itemsToPool.Array.data[0].amountToPool
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 295848003569843942, guid: d057eb8705fec064280b46a90a126e39, type: 3}
+      propertyPath: itemsToPool.Array.data[1].amountToPool
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 295848003569843943, guid: d057eb8705fec064280b46a90a126e39, type: 3}
       propertyPath: m_Name
       value: ObjectPooler
@@ -6850,6 +6866,10 @@ PrefabInstance:
       value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 2261350450983510829, guid: 218a72f3697253549a4cb974980eebe2, type: 3}
+      propertyPath: groundDistance
+      value: 0.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 2261350450983510829, guid: 218a72f3697253549a4cb974980eebe2, type: 3}
       propertyPath: gravityMultiplier
       value: 0.5
       objectReference: {fileID: 0}
@@ -6857,11 +6877,16 @@ PrefabInstance:
       propertyPath: jumpBottonGracePeriod
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2261350450983510830, guid: 218a72f3697253549a4cb974980eebe2, type: 3}
+      propertyPath: m_CollisionDetection
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2261350450983510834, guid: 218a72f3697253549a4cb974980eebe2, type: 3}
       propertyPath: healthBar
       value: 
       objectReference: {fileID: 193658663}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 2261350450905677599, guid: 218a72f3697253549a4cb974980eebe2, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 218a72f3697253549a4cb974980eebe2, type: 3}
 --- !u!1001 &1287678063
 PrefabInstance:
@@ -9599,6 +9624,25 @@ Transform:
   m_Father: {fileID: 1919643461}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1817860498 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2261350450983510820, guid: 218a72f3697253549a4cb974980eebe2, type: 3}
+  m_PrefabInstance: {fileID: 1267450887}
+  m_PrefabAsset: {fileID: 0}
+--- !u!136 &1817860508
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1817860498}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 0.5
+  m_Height: 2
+  m_Direction: 1
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &1827232753
 GameObject:
   m_ObjectHideFlags: 0
