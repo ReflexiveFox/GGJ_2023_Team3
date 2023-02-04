@@ -7,7 +7,7 @@ namespace RootBoy
     {
         public void LoadGameScene()
         {
-            SceneManager.LoadScene(2);
+            SceneManager.LoadScene("Game");
         }
     }
 }
