@@ -8941,6 +8941,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2261350450983510829, guid: 218a72f3697253549a4cb974980eebe2, type: 3}
+      propertyPath: speed
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 2261350450983510829, guid: 218a72f3697253549a4cb974980eebe2, type: 3}
+      propertyPath: jumpHeight
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 2261350450983510831, guid: 218a72f3697253549a4cb974980eebe2, type: 3}
       propertyPath: m_Radius
       value: 0.31
