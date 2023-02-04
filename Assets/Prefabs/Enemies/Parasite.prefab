@@ -16,6 +16,7 @@ GameObject:
   - component: {fileID: 2116498912588127414}
   - component: {fileID: 6789998756907976313}
   - component: {fileID: 7616356759758628126}
+  - component: {fileID: 238699960}
   m_Layer: 8
   m_Name: Parasite
   m_TagString: Enemy
@@ -129,12 +130,12 @@ NavMeshAgent:
   m_GameObject: {fileID: 2261350450983510820}
   m_Enabled: 1
   m_AgentTypeID: 0
-  m_Radius: 2
+  m_Radius: 4
   m_Speed: 3.5
   m_Acceleration: 8
   avoidancePriority: 50
   m_AngularSpeed: 120
-  m_StoppingDistance: 1
+  m_StoppingDistance: 4
   m_AutoTraverseOffMeshLink: 1
   m_AutoBraking: 1
   m_AutoRepath: 1
@@ -171,6 +172,21 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   healthBar: {fileID: 8585586320775566386}
   maxHealth: 100
+--- !u!114 &238699960
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2261350450983510820}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2a7fbe050496ccb44a0a257d5665e437, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damage: 10
+  timeToWait: 1
+  distanceFromPlayer: 2
 --- !u!1 &2884660990405466897
 GameObject:
   m_ObjectHideFlags: 0
