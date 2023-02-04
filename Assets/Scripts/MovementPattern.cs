@@ -69,8 +69,6 @@ namespace RootBoy
             {
                 UpdateDestination(TargetTransform.position);
             }
-
-            Debug.Log($"{gameObject.name} has Path ? : {agent.hasPath}");
         }
 
         private void OnDestroy()
