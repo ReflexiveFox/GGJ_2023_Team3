@@ -5,7 +5,6 @@ namespace RootBoy
     public class HealthPickup : MonoBehaviour
     {
         public float rotationSpeed = 100.0f;
-
         [SerializeField] private int healAmount;
 
         void update()
