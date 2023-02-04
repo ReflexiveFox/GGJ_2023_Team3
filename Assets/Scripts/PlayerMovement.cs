@@ -45,6 +45,7 @@ namespace RootBoy
         void Update()
         {
             isGrounded = Physics.CheckSphere(groundCheck.position, groundDistance, groundMask);
+            
             if (isGrounded && velocity.y < 0) 
             {
                 velocity.y = -2.5f;
@@ -101,10 +102,7 @@ namespace RootBoy
             {
                 controller.stepOffset = 0;
                 isGrounded = false;
-            }
-                
-
-            
+            }  
         }
 
 
