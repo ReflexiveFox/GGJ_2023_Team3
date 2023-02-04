@@ -10,20 +10,28 @@ namespace RootBoy
         private Vector3 startPos;
         private Transform _targetTransform;
 
+        private MovementPattern movementPattern;
+
         private Transform TargetTransform
         {
             get => _targetTransform;
             set
             {
                 _targetTransform = value;
-                agent.SetDestination(_targetTransform is null ? startPos : _targetTransform.position);
+                if(_targetTransform is null)
+                {
+                    enabled = false;
+                }
+                //agent.SetDestination(_targetTransform is null ? startPos : _targetTransform.position);
             }
         }
 
         private void Awake()
-        {
+        {   
+            movementPattern = GetComponent<MovementPattern>();
             agent = GetComponent<NavMeshAgent>();
             playerChecker = GetComponentInChildren<PlayerChecker>();
+            
         }
 
         private void Start()
@@ -51,6 +59,8 @@ namespace RootBoy
         {
             if(other.CompareTag("Player"))
             {
+                enabled = true;
+                movementPattern.enabled = false;
                 TargetTransform = other.transform;
             }
         }
@@ -59,6 +69,7 @@ namespace RootBoy
         {
             if (other.CompareTag("Player"))
             {
+                movementPattern.enabled = true;
                 TargetTransform = null;
             }
         }
