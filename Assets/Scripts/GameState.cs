@@ -1,4 +1,4 @@
-namespace EndlessWarfare
+namespace RootBoy
 {
     public enum GameState
     {

@@ -1,6 +1,6 @@
 using UnityEngine;
 
-namespace EndlessWarfare
+namespace RootBoy
 {
     public class PauseListener : MonoBehaviour
     {
