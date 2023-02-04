@@ -20,6 +20,11 @@ public class textScroll : MonoBehaviour
     void Start()
     {
         myGorectTransform = gameObject.GetComponent<RectTransform>();
+      
+    }
+
+    public void IniziaScroll()
+    {
         StartCoroutine(AutoScrollText());
     }
 
@@ -28,6 +33,17 @@ public class textScroll : MonoBehaviour
         while (myGorectTransform.localPosition.y <boundaryTextEnd)
         {
             myGorectTransform.Translate(Vector3.up * speed*Time.deltaTime);
+            if (myGorectTransform.localPosition.y>boundaryTextEnd)
+            {
+                if (isLooping)
+                {
+                    myGorectTransform.localPosition = Vector3.up * textPosBegin;
+                }
+                else
+                {
+                    break;
+                }
+            }
             yield return null;
             
         }
