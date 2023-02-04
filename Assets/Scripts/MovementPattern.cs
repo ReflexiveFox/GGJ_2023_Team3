@@ -24,7 +24,12 @@ namespace RootBoy
                 _targetTransform = value;
                 isChasingPlayer = value is not null;
                 if (!isChasingPlayer)
-                    UpdateDestination(waypoints[waypointIndex].position);
+                {
+                    if (waypoints[waypointIndex] != null)
+                    {
+                        UpdateDestination(waypoints[waypointIndex].position);
+                    }
+                }
             }
         }
 
@@ -37,7 +42,10 @@ namespace RootBoy
         // Start is called before the first frame update
         void Start()
         {
-            UpdateDestination(waypoints[waypointIndex].position);
+            if(waypoints[waypointIndex] != null)
+            {
+                 UpdateDestination(waypoints[waypointIndex].position);
+            }
 
             playerChecker.OnPlayerEntered += EngageTarget;
             playerChecker.OnPlayerLeft += DisengageTarget;
