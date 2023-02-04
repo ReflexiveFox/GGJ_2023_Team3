@@ -4,8 +4,14 @@ namespace RootBoy
 {
     public class AttackReloadPickup : MonoBehaviour
     {
+        public float rotationSpeed = 100.0f;
         [SerializeField] private float newReloadTime;
         [SerializeField] private float boostAmount;
+
+        void update()
+        {
+            transform.Rotate(new Vector3(0, rotationSpeed * Time.deltaTime, 0));
+        }
 
         private void OnTriggerEnter(Collider other)
         {
