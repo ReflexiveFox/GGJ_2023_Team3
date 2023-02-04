@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 namespace RootBoy
@@ -16,12 +14,20 @@ namespace RootBoy
         private void Start()
         {
             DisableHUD();
-            PlayerHealth.OnPlayerDead += EnableHUD;
+            GameStateManager.Instance.OnGameStateChanged += CheckState;
         }
 
         private void OnDestroy()
         {
-            PlayerHealth.OnPlayerDead -= EnableHUD;
+            GameStateManager.Instance.OnGameStateChanged -= CheckState;
+        }
+
+        private void CheckState(GameState newGameState)
+        {
+            if(newGameState is GameState.Lost)
+            {
+                EnableHUD();
+            }
         }
 
         private void EnableHUD()
