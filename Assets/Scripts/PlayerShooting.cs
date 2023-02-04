@@ -5,7 +5,7 @@ namespace RootBoy
 {
     public class PlayerShooting : MonoBehaviour
     {
-        [SerializeField] private Transform startProjectilePosition;
+        [SerializeField] private Transform startProjectileTransform;
         [SerializeField, Min(0.01f)] private float reloadTime;
         private float _currentReload;
         private bool canShoot;
@@ -27,7 +27,10 @@ namespace RootBoy
             if (Input.GetButtonDown("Fire1") && canShoot)
             {
                 GameObject temp = ObjectPooler.SharedInstance.GetPooledObject("ProjectilePlayer");
-                temp.transform.SetPositionAndRotation(startProjectilePosition.position, startProjectilePosition.rotation);
+                temp.transform.parent = startProjectileTransform;
+                temp.transform.localPosition = Vector3.zero;
+                temp.transform.localRotation = Quaternion.Euler(Vector3.zero);
+                temp.transform.parent = null;
                 temp.SetActive(true);
                 StartCoroutine(StartReloading());
             }

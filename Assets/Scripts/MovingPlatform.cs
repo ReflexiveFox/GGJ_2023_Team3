@@ -31,16 +31,26 @@ public class MovingPlatform : MonoBehaviour
         _elapsedTime += Time.deltaTime;
 
         float elapsedPercentage = _elapsedTime / _timeToWaypoint;
-        transform.position = Vector3.Lerp(_previousWaypoint.position, _targetWaypoint.position, elapsedPercentage);
-
-        if (elapsedPercentage >= 1)
+        if ( _waypointPath != null)
         {
-            TargetNextWaypoint();
+            transform.position = Vector3.Lerp(_previousWaypoint.position, _targetWaypoint.position, elapsedPercentage);
+
+            if (elapsedPercentage >= 1)
+            {
+               TargetNextWaypoint();
+            }
         }
+       
+        
     }
 
     private void TargetNextWaypoint()
     {
+        if (_waypointPath is null)
+        {
+            return;
+        }
+
         _previousWaypoint = _waypointPath.GetWaypoint(_targetWaypointIndex);
         _targetWaypointIndex = _waypointPath.GetNextWaypointIndex(_targetWaypointIndex);
         _targetWaypoint = _waypointPath.GetWaypoint(_targetWaypointIndex);
