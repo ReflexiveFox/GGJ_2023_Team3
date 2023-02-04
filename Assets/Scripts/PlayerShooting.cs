@@ -18,7 +18,7 @@ namespace RootBoy
         {
             if (Input.GetButtonDown("Fire1") && canShoot)
             {
-                GameObject temp = ObjectPooler.SharedInstance.GetPooledObject("Projectile");
+                GameObject temp = ObjectPooler.SharedInstance.GetPooledObject("ProjectilePlayer");
                 temp.transform.position = startProjectilePosition.position;
                 temp.transform.rotation = startProjectilePosition.rotation;
                 temp.SetActive(true);
