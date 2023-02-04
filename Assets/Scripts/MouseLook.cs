@@ -11,6 +11,17 @@ namespace RootBoy
         private void Start()
         {
             Cursor.lockState = CursorLockMode.Locked; // non vogliamo vedere il cursore quando ruotiamo
+            PlayerHealth.OnPlayerDead += DisableComponent;
+        }
+
+        private void OnDestroy()
+        {
+            PlayerHealth.OnPlayerDead -= DisableComponent;
+        }
+        private void DisableComponent()
+        {
+            Cursor.lockState = CursorLockMode.None;
+            enabled = false;
         }
 
         // Update is called once per frame

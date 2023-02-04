@@ -18,6 +18,16 @@ namespace RootBoy
 
         public float jumpHeight = 3f;
 
+        private void Start()
+        {
+            PlayerHealth.OnPlayerDead += DisableComponent;
+        }
+
+        private void OnDestroy()
+        {
+            PlayerHealth.OnPlayerDead -= DisableComponent;
+        }
+
         // Update is called once per frame
         void Update()
         {
@@ -40,6 +50,15 @@ namespace RootBoy
             Vector3 move = transform.right * x + transform.forward * z;
             // vogliamo le coordinate locali, perché il personaggio può ruotare
             controller.Move(move * speed * Time.deltaTime);
+        }
+
+
+        private void DisableComponent()
+        {
+            GetComponent<Rigidbody>().Sleep();
+            GetComponent<MeshRenderer>().enabled = false;
+            controller.enabled = false; 
+            enabled = false;
         }
     }
 }

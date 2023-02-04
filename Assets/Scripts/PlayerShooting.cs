@@ -12,6 +12,12 @@ namespace RootBoy
         private void Start()
         {
             canShoot = true;
+            PlayerHealth.OnPlayerDead += DisableComponent;
+        }
+
+        private void DisableComponent()
+        {
+            enabled = false;
         }
 
         void Update()
@@ -24,6 +30,11 @@ namespace RootBoy
                 temp.SetActive(true);
                 StartCoroutine(StartReloading());
             }
+        }
+
+        private void OnDestroy()
+        {
+            PlayerHealth.OnPlayerDead -= DisableComponent;
         }
 
         private IEnumerator StartReloading()
