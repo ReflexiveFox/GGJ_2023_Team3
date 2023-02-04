@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using UnityEngine;
 
@@ -5,7 +6,11 @@ namespace RootBoy
 {
     public class ProjectileBehaviour : MonoBehaviour
     {
+        public enum ProjectileType { NotDefined, Player, Enemy }
+        [SerializeField] private ProjectileType type;
         [SerializeField] private float shootForce = 100f;
+        [SerializeField] private int damage = 10;
+        [SerializeField] private float timeToLive = 5f;
 
         private Rigidbody projectileRb;
         private void Awake()
@@ -19,10 +24,28 @@ namespace RootBoy
             projectileRb.angularVelocity = Vector3.zero;
 
             projectileRb.AddForce(transform.forward * shootForce, ForceMode.Impulse);
+            StartCoroutine(StartLifetimeCountdown());
+        }
+
+        private void OnDisable()
+        {
+            StopAllCoroutines();
         }
 
         private void OnCollisionEnter(Collision collision)
         {
+            if ((type is ProjectileType.Player && collision.collider.CompareTag("Enemy"))
+                || (type is ProjectileType.Enemy && collision.collider.CompareTag("Player")))
+            {
+                collision.collider.GetComponent<Health>().DealDamage(damage);
+            }
+            gameObject.SetActive(false);
+        }
+
+
+        private IEnumerator StartLifetimeCountdown()
+        {
+            yield return new WaitForSeconds(timeToLive);
             gameObject.SetActive(false);
         }
     }
