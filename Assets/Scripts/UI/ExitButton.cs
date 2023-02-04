@@ -7,6 +7,8 @@ namespace RootBoy
         public void QuitGame()
         {
             Application.Quit();
+            Debug.Log("Esci");
+            
         }
     }
 }

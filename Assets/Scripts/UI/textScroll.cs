@@ -5,9 +5,9 @@ using TMPro;
 
 public class textScroll : MonoBehaviour
 {
-    float speed = 100.0f;
+    float speed = 50.0f;
     float textPosBegin= -530.0f;
-    float boundaryTextEnd=1090.0f;
+    float boundaryTextEnd=1230.0f;
 
     RectTransform myGorectTransform;
     [SerializeField]
@@ -19,12 +19,33 @@ public class textScroll : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        myGorectTransform = gameObject.GetComponent<RectTransform>();
+      
     }
 
-    // Update is called once per frame
-    void Update()
+    public void IniziaScroll()
     {
-        
+        StartCoroutine(AutoScrollText());
+    }
+
+    IEnumerator AutoScrollText ()
+    {
+        while (myGorectTransform.localPosition.y <boundaryTextEnd)
+        {
+            myGorectTransform.Translate(Vector3.up * speed*Time.deltaTime);
+            if (myGorectTransform.localPosition.y>boundaryTextEnd)
+            {
+                if (isLooping)
+                {
+                    myGorectTransform.localPosition = Vector3.up * textPosBegin;
+                }
+                else
+                {
+                    break;
+                }
+            }
+            yield return null;
+            
+        }
     }
 }
