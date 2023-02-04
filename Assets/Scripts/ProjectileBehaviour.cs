@@ -36,8 +36,9 @@ namespace RootBoy
         {
             if ((type is ProjectileType.Player && collision.collider.CompareTag("Enemy"))
                 || (type is ProjectileType.Enemy && collision.collider.CompareTag("Player")))
-            {
-                collision.collider.GetComponent<Health>().DealDamage(damage);
+            {                
+                if(collision.collider.TryGetComponent(out Health entityHealth))
+                    entityHealth.DealDamage(damage);
             }
             gameObject.SetActive(false);
         }
