@@ -1243,6 +1243,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 436077801}
     m_Modifications:
+    - target: {fileID: 2116498912588127414, guid: e28198eb60ed4dc46a58d9562eb030e1, type: 3}
+      propertyPath: m_Radius
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2116498912588127414, guid: e28198eb60ed4dc46a58d9562eb030e1, type: 3}
+      propertyPath: m_StoppingDistance
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 2261350450983510820, guid: e28198eb60ed4dc46a58d9562eb030e1, type: 3}
       propertyPath: m_Name
       value: Parasite (4)
