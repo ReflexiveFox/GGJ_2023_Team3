@@ -56,16 +56,21 @@ namespace RootBoy
         {
             if (!isChasingPlayer)
             {
-                if (Vector3.Distance(transform.position, target) < 1)
+                if (waypoints[waypointIndex] is not null)
                 {
-                    IterateWaypointIndex();
-                    UpdateDestination(waypoints[waypointIndex].position);
+                    if (Vector3.Distance(transform.position, target) < 1)
+                    {
+                        IterateWaypointIndex();
+                        UpdateDestination(waypoints[waypointIndex].position);
+                    }
                 }
             }
             else if (TargetTransform != null)
             {
                 UpdateDestination(TargetTransform.position);
             }
+
+            Debug.Log($"{gameObject.name} has Path ? : {agent.hasPath}");
         }
 
         private void OnDestroy()

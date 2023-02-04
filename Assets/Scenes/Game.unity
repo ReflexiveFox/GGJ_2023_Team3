@@ -2420,6 +2420,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 295848003569843942, guid: d057eb8705fec064280b46a90a126e39, type: 3}
+      propertyPath: itemsToPool.Array.data[0].amountToPool
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 295848003569843942, guid: d057eb8705fec064280b46a90a126e39, type: 3}
+      propertyPath: itemsToPool.Array.data[1].amountToPool
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 295848003569843943, guid: d057eb8705fec064280b46a90a126e39, type: 3}
       propertyPath: m_Name
       value: ObjectPooler
@@ -6861,7 +6869,8 @@ PrefabInstance:
       propertyPath: healthBar
       value: 
       objectReference: {fileID: 193658663}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 2261350450905677599, guid: 218a72f3697253549a4cb974980eebe2, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 218a72f3697253549a4cb974980eebe2, type: 3}
 --- !u!1001 &1287678063
 PrefabInstance:
