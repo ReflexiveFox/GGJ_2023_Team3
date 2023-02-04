@@ -7,7 +7,7 @@ public class textScroll : MonoBehaviour
 {
     float speed = 50.0f;
     float textPosBegin= -530.0f;
-    float boundaryTextEnd=1090.0f;
+    float boundaryTextEnd=1230.0f;
 
     RectTransform myGorectTransform;
     [SerializeField]
