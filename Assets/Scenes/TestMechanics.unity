@@ -1071,10 +1071,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: AttackReloadPickup
       objectReference: {fileID: 0}
-    - target: {fileID: 3784316067020873948, guid: 8b94cade69b2b514e9e60c6795c68635, type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: db6e11508de7f0f4c8745b07389d517f, type: 2}
     - target: {fileID: 3784316067020873950, guid: 8b94cade69b2b514e9e60c6795c68635, type: 3}
       propertyPath: m_RootOrder
       value: 1
