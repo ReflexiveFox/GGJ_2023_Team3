@@ -3,7 +3,12 @@ guid: aab039c0c2aff754f85d39da642ab175
 ModelImporter:
   serializedVersion: 21300
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: tunnell_Group25733Mat
+    second: {fileID: 2100000, guid: 645f069937c3bb1488c80f1b379f29e4, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
