@@ -9,6 +9,7 @@ namespace RootBoy
         public float rotationSpeed = 100.0f;
         [SerializeField] private float newReloadTime;
         [SerializeField] private float boostAmount;
+        public AudioClip PowerUp;
 
         void Update()
         {
@@ -19,8 +20,10 @@ namespace RootBoy
         {
             if(other.TryGetComponent(out PlayerShooting playerShooting))
             {
+
                 if (playerShooting)
                 {
+                    AudioSource.PlayClipAtPoint(PowerUp, transform.position);
                     playerShooting.BoostReloadTime(newReloadTime, boostAmount);
                     gameObject.SetActive(false);
                 }

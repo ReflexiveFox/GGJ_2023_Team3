@@ -112,3 +112,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rotationSpeed: 100
   healAmount: 50
+  PowerUp: {fileID: 8300000, guid: bfce46f4dfe359846b484c196611aece, type: 3}

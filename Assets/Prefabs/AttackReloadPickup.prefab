@@ -113,3 +113,4 @@ MonoBehaviour:
   rotationSpeed: 100
   newReloadTime: 0.2
   boostAmount: 5
+  PowerUp: {fileID: 8300000, guid: 3426a538f6abc5446854a5d9914f0ccf, type: 3}
