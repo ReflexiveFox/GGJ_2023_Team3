@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: b8486bba0ad83674fbec43ad974b3f76
+guid: 09e4bca67a8f2d84fb1608a15fed46c3
 ModelImporter:
   serializedVersion: 21300
   internalIDToNameTable: []
@@ -7,8 +7,8 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: protagonista1
-    second: {fileID: 2100000, guid: 75c19b89a69896646bfb37bdfcd54f6b, type: 2}
+      name: aiStandardSurface6
+    second: {fileID: 2100000, guid: 3f81151c1c57c8d49ba373ca47fb17cf, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
@@ -40,7 +40,7 @@ ModelImporter:
     isReadable: 0
   meshes:
     lODScreenPercentages: []
-    globalScale: 0.25
+    globalScale: 1
     meshCompression: 0
     addColliders: 0
     useSRGBMaterialColor: 1
@@ -93,7 +93,7 @@ ModelImporter:
     armStretch: 0.05
     legStretch: 0.05
     feetSpacing: 0
-    globalScale: 0.25
+    globalScale: 1
     rootMotionBoneName: 
     hasTranslationDoF: 0
     hasExtraRoot: 0
