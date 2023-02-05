@@ -1,13 +1,12 @@
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 
-public class textScroll : MonoBehaviour
+public class TextScroll : MonoBehaviour
 {
-    float speed = 50.0f;
-    float textPosBegin= -530.0f;
-    float boundaryTextEnd=1230.0f;
+    [SerializeField] private float speed = 50.0f;
+    [SerializeField] private float textPosBegin = -530.0f;
+    [SerializeField] private float boundaryTextEnd = 1230.0f;
 
     RectTransform myGorectTransform;
     [SerializeField]
@@ -19,8 +18,7 @@ public class textScroll : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        myGorectTransform = gameObject.GetComponent<RectTransform>();
-      
+        myGorectTransform = gameObject.GetComponent<RectTransform>();      
     }
 
     public void IniziaScroll()

@@ -832,10 +832,65 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2368029434353334662, guid: 7e9ee24cecfddb64d949b498c016f79b, type: 3}
       propertyPath: m_text
-      value: "Game Designer:\nLorenzo Musumeci\n\nProgrammatori:\nLorenzo Petraroli\nLorenzo
-        Musumeci\nPaolo Michele Basile\n\n3D Artists:\nRebecca Ciuni\nSamuele Fisichella\nMichele
-        Bonanno\nGiuseppe Stanzione\n\n     Digital Artists:\t\nDario Campione\nGiuseppe
-        Fichera\nGiulio Cottone"
+      value: 'DEVELOPMENT TEAM
+
+
+        Game Designers / Coders:
+
+
+        Lorenzo
+        Musumeci
+
+        Lorenzo Petraroli
+
+        Paolo Michele Basile
+
+
+        3D
+        Artists:
+
+
+        Rebecca Ciuni
+
+        Samuele Fisichella
+
+        Michele
+        Bonanno
+
+        Giuseppe Stanzione
+
+
+        Digital Artists:
+
+
+        Dario
+        Campione
+
+        Giuseppe Fichera
+
+        Giulio Cottone
+
+
+        SOFTWARES
+
+
+        Game
+        Engine
+
+        Unity 2021.3.18
+
+
+        3D Modelling
+
+        Maya
+
+        Substance
+        Painter
+
+
+        Digital Art
+
+        Photoshop'
       objectReference: {fileID: 0}
     - target: {fileID: 2368029434353334662, guid: 7e9ee24cecfddb64d949b498c016f79b, type: 3}
       propertyPath: m_fontSize
@@ -935,7 +990,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2368029434353334663, guid: 7e9ee24cecfddb64d949b498c016f79b, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 1220
+      value: -898
       objectReference: {fileID: 0}
     - target: {fileID: 2368029434353334663, guid: 7e9ee24cecfddb64d949b498c016f79b, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -4959,7 +5014,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 2
-  m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
+  m_BackGroundColor: {r: 0.32863104, g: 0.4745098, b: 0.19215688, a: 0}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
   m_FOVAxisMode: 0
@@ -8852,6 +8907,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3af7e4c0c1c9ea641b041c431c2c04a4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  speed: 50
+  textPosBegin: -898
+  boundaryTextEnd: 1596
   mainText: {fileID: 2064633389}
   isLooping: 1
 --- !u!114 &2064633389 stripped
