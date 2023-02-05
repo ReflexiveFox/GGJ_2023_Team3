@@ -2,11 +2,11 @@ using System.Collections;
 using UnityEngine;
 using TMPro;
 
-public class TextScroll : MonoBehaviour
+public class textScroll : MonoBehaviour
 {
     [SerializeField] private float speed = 50.0f;
-    [SerializeField] private float textPosBegin = -530.0f;
-    [SerializeField] private float boundaryTextEnd = 1230.0f;
+    [SerializeField] private float textPosBegin = -1250;
+    [SerializeField] private float boundaryTextEnd = 1300.0f;
 
     RectTransform myGorectTransform;
     [SerializeField]
