@@ -9,7 +9,7 @@ namespace RootBoy
 
         void Update()
         {
-            transform.Rotate(new Vector3(0, rotationSpeed * Time.deltaTime, 0));
+            transform.Rotate(new Vector3(0, 0, rotationSpeed * Time.deltaTime));
         }
 
         private void OnTriggerEnter(Collider other)
