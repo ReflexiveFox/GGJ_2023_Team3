@@ -18,6 +18,7 @@ namespace RootBoy
             {
                 if (!playerHealth.IsMaxHealth)
                 {
+                    AudioSource.PlayClipAtPoint(PowerUp, transform.position);
                     playerHealth.Heal(healAmount);
                     gameObject.SetActive(false);
                 }
