@@ -11,6 +11,7 @@ namespace RootBoy
         [SerializeField] private float shootForce = 100f;
         [SerializeField] private int damage = 10;
         [SerializeField] private float timeToLive = 5f;
+        public AudioClip PowerUp;
 
         private Rigidbody projectileRb;
         private void Awake()
@@ -34,6 +35,10 @@ namespace RootBoy
 
         private void OnCollisionEnter(Collision collision)
         {
+            if(type is ProjectileType.Player)
+            {
+                AudioSource.PlayClipAtPoint(PowerUp, transform.position);
+            }
             if ((type is ProjectileType.Player && collision.collider.CompareTag("Enemy"))
                 || (type is ProjectileType.Enemy && collision.collider.CompareTag("Player")))
             {                

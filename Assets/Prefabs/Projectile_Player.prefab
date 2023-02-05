@@ -66,6 +66,7 @@ MonoBehaviour:
   shootForce: 50
   damage: 10
   timeToLive: 5
+  PowerUp: {fileID: 8300000, guid: 829d9dbe0b00c4842ae405ef7631df4a, type: 3}
 --- !u!1 &5860133332803041112
 GameObject:
   m_ObjectHideFlags: 0
