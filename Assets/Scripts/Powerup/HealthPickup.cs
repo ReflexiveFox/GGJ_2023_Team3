@@ -7,7 +7,7 @@ namespace RootBoy
         public float rotationSpeed = 100.0f;
         [SerializeField] private int healAmount;
 
-        void update()
+        void Update()
         {
             transform.Rotate(new Vector3(0, rotationSpeed * Time.deltaTime, 0));
         }

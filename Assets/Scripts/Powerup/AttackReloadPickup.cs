@@ -10,7 +10,7 @@ namespace RootBoy
         [SerializeField] private float newReloadTime;
         [SerializeField] private float boostAmount;
 
-        void update()
+        void Update()
         {
             transform.Rotate(new Vector3(0, rotationSpeed * Time.deltaTime, 0));
         }
